@@ -9,7 +9,7 @@ import {useDispatch, useSelector} from "react-redux";
 import {addStaff, deleteStaff, updateStaff} from "../slices/StaffSlice.tsx";
 import {AlertComponent} from "../components/common/AlertComponent.tsx";
 
-type InputType = "text" | "number" | "email" | "file" | "date";
+type InputType = "text" | "number" | "email" | "file" | "date" | "select";
 
 export const StaffPage = () => {
     // @ts-ignore
@@ -35,7 +35,7 @@ export const StaffPage = () => {
         { key: "role", header:"Role"},
     ];
 
-    const formFields: Array<{ name: keyof Staff; label: string; type: InputType; required?: boolean }> = [
+    const formFields: Array<{ name: keyof Staff; label: string; type: InputType; options?: string[]; required?: boolean }> = [
         { name: "firstName", label: "First Name", type: "text", required: true },
         { name: "lastName", label: "Last Name", type: "text", required: true },
         { name: "designation", label: "Designation", type: "text", required: true },
