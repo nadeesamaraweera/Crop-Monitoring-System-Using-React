@@ -20,7 +20,7 @@ export const SidebarItemComponent: React.FC<SidebarItemProps> = ({href, Icon, la
                     <Icon className="w-5 h-5 transition-transform duration-200 group-hover:scale-110" />
                     <span className="ms-3 font-medium text-xl">{label}</span>
                     {badge && (
-                        <span className="inline-flex items-center justify-center px-2 ms-3 text-sm font-medium text-green-800 bg-green-200 rounded-full">
+                        <span className="inline-flex items-center justify-center px-2 ms-3 text-sm font-medium text-green-800 bg-green-300 rounded-full">
                             {badge}
                         </span>
                     )}
