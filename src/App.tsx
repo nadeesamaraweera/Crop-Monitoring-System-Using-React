@@ -3,6 +3,7 @@ import {createBrowserRouter, Navigate, RouterProvider} from "react-router-dom";
 import {RegisterPage} from "./pages/RegisterPage";
 import {RootLayout} from "./components/layout/RootLayout.tsx";
 import {LoginPage} from "./pages/LoginPage.tsx";
+import {DashboardPage} from "./pages/DashboardPage.tsx";
 
 
 function App() {
@@ -15,6 +16,8 @@ function App() {
                 { path: '', element: <Navigate to="/signin" replace /> },
                 { path : '/signUp', element : <RegisterPage/>},
                 { path : '/signIn', element : <LoginPage/>},
+                { path : '/dashboard', element : <DashboardPage/>},
+
 
             ]
         },

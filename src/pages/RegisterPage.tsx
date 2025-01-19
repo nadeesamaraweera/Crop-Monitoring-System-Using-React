@@ -19,7 +19,7 @@ export const RegisterPage: React.FC = () => {
                     <div className="w-1/2 rounded-l-2xl overflow-hidden">
                         <img
                             className="w-full h-full object-cover"
-                            src="src/assets/an Indian farmer.jpeg"
+                            src="src/assets/farmer.jpeg"
                             alt="Signup Illustration"
                         />
                     </div>
