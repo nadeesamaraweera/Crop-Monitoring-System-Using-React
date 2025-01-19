@@ -9,6 +9,7 @@ import {CropsPage} from "./pages/CropsPage.tsx";
 import {StaffPage} from "./pages/StaffPage.tsx";
 import {VehiclePage} from "./pages/VehiclePage.tsx";
 import {LogsPage} from "./pages/LogsPage.tsx";
+import {EquipmentPage} from "./pages/EquipmentPage.tsx";
 
 
 function App() {
@@ -27,9 +28,7 @@ function App() {
                 { path: '/dashboard/staffs', element: <StaffPage /> },
                 { path: '/dashboard/logs', element: <LogsPage/> },
                 { path: '/dashboard/vehicles', element: <VehiclePage/> },
-
-
-
+                { path: '/dashboard/equipment', element: <EquipmentPage/> },
                 { path: '/logout', element: <Navigate to="/signin" replace /> },
 
 
