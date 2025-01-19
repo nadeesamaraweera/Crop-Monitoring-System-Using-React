@@ -4,6 +4,7 @@ import {RegisterPage} from "./pages/RegisterPage";
 import {RootLayout} from "./components/layout/RootLayout.tsx";
 import {LoginPage} from "./pages/LoginPage.tsx";
 import {DashboardPage} from "./pages/DashboardPage.tsx";
+import {FieldsPage} from "./pages/FieldsPage.tsx";
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
                 { path : '/signUp', element : <RegisterPage/>},
                 { path : '/signIn', element : <LoginPage/>},
                 { path : '/dashboard', element : <DashboardPage/>},
+                { path : '/dashboard/fields', element : <FieldsPage/> },
 
 
             ]
