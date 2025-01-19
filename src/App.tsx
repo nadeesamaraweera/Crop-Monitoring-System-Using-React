@@ -2,6 +2,7 @@ import './App.css'
 import {createBrowserRouter, Navigate, RouterProvider} from "react-router-dom";
 import {RegisterPage} from "./pages/RegisterPage";
 import {RootLayout} from "./components/layout/RootLayout.tsx";
+import {LoginPage} from "./pages/LoginPage.tsx";
 
 
 function App() {
@@ -12,7 +13,8 @@ function App() {
             element : <RootLayout />,
             children : [
                 { path: '', element: <Navigate to="/signin" replace /> },
-                { path : '/signin', element : <RegisterPage/>},
+                { path : '/signUp', element : <RegisterPage/>},
+                { path : '/signIn', element : <LoginPage/>},
 
             ]
         },
