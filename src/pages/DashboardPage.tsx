@@ -47,18 +47,18 @@ export const DashboardPage = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {stats.map((stat, index) => (
                         <StatsCard key={index} title={stat.title} value={stat.value} />
-                    ))}
+                    ))} <br/>
                 </div>
 
                 {/* Align Line Chart and Pie Chart Side-by-Side */}
-                <div className="mt-10 flex flex-wrap lg:flex-nowrap gap-10">
+                <div className="mt-5 flex flex-wrap lg:flex-nowrap gap-10">
                     {/* Line Chart */}
                     <div className="flex-1 min-w-[300px]">
                         <LineChartComponent data={lineChartData} />
                     </div>
 
                     {/* Pie Chart */}
-                    <div className="flex-1 min-w-[400px]">
+                    <div className="flex-1 min-w-[300px]">
                         <PieChartComponent data={columnChartData} />
                     </div>
 
