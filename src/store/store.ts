@@ -1,5 +1,5 @@
 import {configureStore} from "@reduxjs/toolkit";
-// import CropSlice from "../slices/CropSlice.tsx";
+import CropSlice from "../slices/CropSlice.tsx";
 import FieldSlice from "../slices/FieldSlice.tsx";
 // import StaffSlice from "../slices/StaffSlice.tsx";
 // import LogSlice from "../slices/LogSlice.tsx";
@@ -8,7 +8,7 @@ import FieldSlice from "../slices/FieldSlice.tsx";
 
 export const store = configureStore({
     reducer: {
-        // crop: CropSlice,
+        crop: CropSlice,
         field: FieldSlice,
         // staff: StaffSlice,
         // log: LogSlice,

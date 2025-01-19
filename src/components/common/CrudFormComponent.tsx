@@ -8,13 +8,14 @@ interface DataItem {
 interface FieldConfig<T> {
     name: keyof T;
     label: string;
-    type: "text" | "number" | "email" | "file" | "date" | "time";
+    type: "text" | "number" | "email" | "file" | "date" | "time" | "select";  // Added "select" type
     required?: boolean;
     min?: number;
     max?: number;
     pattern?: string;
     accept?: string;
     defaultValue?: any;
+    options?: string[]; // Added options for select dropdowns
 }
 
 interface CrudFormProps<T extends DataItem> {
@@ -60,11 +61,9 @@ export function CrudForm<T extends DataItem>({
             if (field.type === "file") {
                 const fileInput = formData[field.name] as unknown as FileList;
                 if (fileInput?.length > 0) {
-                    // @ts-ignore
                     processedData[field.name] = fileInput[0];
                 }
             } else if (field.type === "number") {
-                // @ts-ignore
                 processedData[field.name] = Number(formData[field.name]);
             }
         });
@@ -72,7 +71,7 @@ export function CrudForm<T extends DataItem>({
         onSubmit(processedData);
     };
 
-    const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
         const { name, value, type, files } = e.target;
 
         if (type === "file" && files && files.length > 0) {
@@ -95,12 +94,34 @@ export function CrudForm<T extends DataItem>({
         const fieldName = String(field.name);
         const value = formData[field.name];
 
+        if (field.type === "select" && field.options) {
+            return (
+                <div key={fieldName} className="space-y-2">
+                    <label className="block text-sm font-medium text-gray-700">
+                        {field.label}
+                    </label>
+                    <select
+                        name={fieldName}
+                        value={value || ""}
+                        onChange={handleChange}
+                        required={field.required}
+                        className="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 border-gray-300"
+                    >
+                        {field.options.map((option, index) => (
+                            <option key={index} value={option}>
+                                {option}
+                            </option>
+                        ))}
+                    </select>
+                </div>
+            );
+        }
+
         return (
             <div key={fieldName} className="space-y-2">
                 <label className="block text-sm font-medium text-gray-700">
                     {field.label}
                 </label>
-
                 <input
                     type={field.type}
                     name={fieldName}
