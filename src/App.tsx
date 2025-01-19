@@ -6,6 +6,7 @@ import {LoginPage} from "./pages/LoginPage.tsx";
 import {DashboardPage} from "./pages/DashboardPage.tsx";
 import {FieldsPage} from "./pages/FieldsPage.tsx";
 import {CropsPage} from "./pages/CropsPage.tsx";
+import {StaffPage} from "./pages/StaffPage.tsx";
 
 
 function App() {
@@ -21,6 +22,8 @@ function App() {
                 { path : '/dashboard', element : <DashboardPage/>},
                 { path : '/dashboard/fields', element : <FieldsPage/> },
                 { path: '/dashboard/crops', element: <CropsPage/> },
+                { path: '/dashboard/staffs', element: <StaffPage /> },
+
 
                 { path: '/logout', element: <Navigate to="/signin" replace /> },
 
