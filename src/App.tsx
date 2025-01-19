@@ -19,6 +19,8 @@ function App() {
                 { path : '/signIn', element : <LoginPage/>},
                 { path : '/dashboard', element : <DashboardPage/>},
                 { path : '/dashboard/fields', element : <FieldsPage/> },
+                { path: '/logout', element: <Navigate to="/signin" replace /> },
+
 
 
             ]

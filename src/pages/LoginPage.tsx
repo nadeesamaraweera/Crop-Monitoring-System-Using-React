@@ -13,7 +13,7 @@ export const LoginPage: React.FC = () => {
 
     return (
         <>
-            <div className="min-h-screen bg-gradient-to-b from-green-50 to-green-100 flex items-center justify-center p-4">
+            <div className="min-h-screen bg-gradient-to-b from-green-50 to-green-300 flex items-center justify-center p-4">
                 <div className="flex w-full max-w-4xl bg-white rounded-2xl shadow-xl">
                     {/* Left Side - Image */}
                     <div className="w-1/2  rounded-l-2xl overflow-hidden">
@@ -35,33 +35,33 @@ export const LoginPage: React.FC = () => {
                                     alt="Leaf"
                                 />
                             </div>
-                                    <h2 className="text-2xl font-bold text-gray-800">Welcome Back</h2>
-                                    <p className="text-gray-500 text-sm">Sign in to your Green Shadow account</p>
-                                </div>
-
-                                <form className="space-y-6">
-                                    <AuthInputComponent label="Email Address" type="email" placeholder="you@gmail.com"
-                                                        required/>
-                                    <AuthInputComponent label="Password" type="password" placeholder="••••••••"
-                                                        required/>
-                                    <div className="flex items-center justify-between">
-                                        <AuthCheckboxComponent id="remember" label="Remember me"/>
-                                        <a href="#" className="text-sm text-green-600 hover:text-green-800">
-                                            Forgot password?
-                                        </a>
-                                    </div>
-                                    <AuthButtonComponent type="submit" onClick={handleSignIn} text="Sign In"/>
-                                </form>
-
-                                <p className="text-center mt-6 text-sm text-gray-500">
-                                    New to Green Shadow?{' '}
-                                    <a href="/signUp" className="text-green-600 hover:text-green-800 font-medium">
-                                        Create an account
-                                    </a>
-                                </p>
-                            </div>
+                            <h2 className="text-2xl font-bold text-gray-800">Welcome Back</h2>
+                            <p className="text-gray-500 text-sm">Sign in to your Green Shadow account</p>
                         </div>
+
+                        <form className="space-y-6">
+                            <AuthInputComponent label="Email Address" type="email" placeholder="you@gmail.com"
+                                                required/>
+                            <AuthInputComponent label="Password" type="password" placeholder="••••••••"
+                                                required/>
+                            <div className="flex items-center justify-between">
+                                <AuthCheckboxComponent id="remember" label="Remember me"/>
+                                <a href="#" className="text-sm text-green-600 hover:text-green-800">
+                                    Forgot password?
+                                </a>
+                            </div>
+                            <AuthButtonComponent type="submit" onClick={handleSignIn} text="Sign In"/>
+                        </form>
+
+                        <p className="text-center mt-6 text-sm text-gray-500">
+                            New to Green Shadow?{' '}
+                            <a href="/signUp" className="text-green-600 hover:text-green-800 font-medium">
+                                Create an account
+                            </a>
+                        </p>
                     </div>
-                </>
-                );
-                };
+                </div>
+            </div>
+        </>
+    );
+};
