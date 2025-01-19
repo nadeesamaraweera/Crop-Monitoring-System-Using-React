@@ -3,7 +3,7 @@ import CropSlice from "../slices/CropSlice.tsx";
 import FieldSlice from "../slices/FieldSlice.tsx";
 import StaffSlice from "../slices/StaffSlice.tsx";
 // import LogSlice from "../slices/LogSlice.tsx";
-// import VehicleSlice from "../slices/VehicleSlice.tsx";
+import VehicleSlice from "../slices/VehicleSlice.tsx";
 // import EquipmentSlice from "../slices/EquipmentSlice.tsx";
 
 export const store = configureStore({
@@ -12,7 +12,7 @@ export const store = configureStore({
         field: FieldSlice,
         staff: StaffSlice,
         // log: LogSlice,
-        // vehicle: VehicleSlice,
+        vehicle: VehicleSlice,
         // equipment: EquipmentSlice,
     },
 });
