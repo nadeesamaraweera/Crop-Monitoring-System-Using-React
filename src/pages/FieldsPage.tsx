@@ -34,7 +34,7 @@ export const FieldsPage = () => {
     const formFields: Array<{ name: keyof Fields; label: string; type: InputType; required?: boolean }> = [
         { name: "name", label: "Name", type: "text", required: true },
         { name: "location", label: "Location", type: "text", required: true },
-        { name: "size", label: "Size", type: "text", required: true },
+        { name: "size", label: "Size", type: "number", required: true },
         { name: "staff", label: "Staff", type: "text", required: true },
         { name: "img1", label: "Image 1", type: "file" },
         { name: "img2", label: "Image 2", type: "file" },
